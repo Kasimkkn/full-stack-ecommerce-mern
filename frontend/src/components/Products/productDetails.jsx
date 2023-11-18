@@ -116,7 +116,6 @@ const ProductDetails = () => {
             <div>
               <div className="detailsBlock-1">
                 <h2>{product.name}</h2>
-                <p>Product # {product._id}</p>
               </div>
               <div className="detailsBlock-2">
                 <Rating {...options} />

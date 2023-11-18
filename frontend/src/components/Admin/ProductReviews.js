@@ -8,7 +8,7 @@ import {
   deleteReviews,
 } from "../../actions/productAction";
 import { useAlert } from "react-alert";
-import { Button } from "@mui/material/Button";
+import { Button } from "@mui/material";
 import MetaData from "../../pages/layout/MetaData.js";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Star from "@mui/icons-material/Star";
@@ -88,7 +88,7 @@ const ProductReviews = () => {
       flex: 0.4,
 
       cellClassName: (params) => {
-        return params.getValue(params.id, "rating") >= 3
+        return params.columns && params.columns.field === "rating" && params.value >= 3
           ? "greenColor"
           : "redColor";
       },
@@ -106,7 +106,7 @@ const ProductReviews = () => {
           <Fragment>
             <Button
               onClick={() =>
-                deleteReviewHandler(params.getValue(params.id, "id"))
+                deleteReviewHandler(params.row.id)
               }
             >
               <DeleteIcon />

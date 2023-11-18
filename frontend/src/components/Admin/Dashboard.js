@@ -95,13 +95,13 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="lineChart">
+        {/* <div className="lineChart">
           <Line data={lineState} />
         </div>
 
         <div className="doughnutChart">
           <Doughnut data={doughnutState} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

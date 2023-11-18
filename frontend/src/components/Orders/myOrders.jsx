@@ -27,7 +27,8 @@ const MyOrders = () => {
       minWidth: 150,
       flex: 0.5,
       cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Delivered"
+        const status = params.getValue(params.id, "status");
+        return status === "Delivered"
           ? "greenColor"
           : "redColor";
       },
@@ -56,8 +57,9 @@ const MyOrders = () => {
       type: "number",
       sortable: false,
       renderCell: (params) => {
+        const orderId = params.row.id || "";
         return (
-          <Link to={`/order/${params.getValue(params.id, "id")}`}>
+          <Link to={`/order/${orderId}`}>
             <LaunchIcon />
           </Link>
         );

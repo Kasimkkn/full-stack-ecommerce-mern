@@ -6,7 +6,7 @@ import {
   getProductDetails,
 } from "../../actions/productAction";
 import { useAlert } from "react-alert";
-import { Button } from "@mui/material/Button";
+import { Button } from "@mui/material";
 import MetaData from "../../pages/layout/MetaData.js";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import DescriptionIcon from "@mui/icons-material/Description";
@@ -41,20 +41,19 @@ const UpdateProduct = () => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Laptop",
     "Footwear",
     "Bottom",
-    "Tops",
-    "Attire",
+    "Shirts",
+    "Laptop",
     "Camera",
     "SmartPhones",
   ];
 
-  const productId = match.params.id;
+  const productId = match.id;
 
   useEffect(() => {
     if (product && product._id !== productId) {
-      dispatch(getProductDetails(productId));
+       dispatch(getProductDetails(productId));
     } else {
       setName(product.name);
       setDescription(product.description);
@@ -78,16 +77,7 @@ const UpdateProduct = () => {
       history("/admin/products");
       dispatch({ type: UPDATE_PRODUCT_RESET });
     }
-  }, [
-    dispatch,
-    alert,
-    error,
-    history,
-    isUpdated,
-    productId,
-    product,
-    updateError,
-  ]);
+  }, [  dispatch,  alert,  error,  history,  isUpdated,  productId,  product,  updateError,]);
 
   const updateProductSubmitHandler = (e) => {
     e.preventDefault();

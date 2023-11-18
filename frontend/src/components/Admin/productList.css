@@ -9,44 +9,43 @@
 }
 
 #productListHeading {
-  font: 400 2rem "Roboto";
+  font: 700 2.5rem "Roboto";
   padding: 0.5vmax;
   box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.637);
+  color: black;
   transition: all 0.5s;
   margin: 2rem;
   text-align: center;
 }
 
 .productListTable {
-  background-color: white;
   border: none !important;
 }
 
 .productListTable div {
-  font: 300 1vmax "Roboto";
-  color: rgba(0, 0, 0, 0.678);
+  font: 400 1.4vmax "Roboto";
+  color: black;
   border: none !important;
 }
 
 .productListTable a,
 .productListTable button {
-  color: rgba(0, 0, 0, 0.527);
+  color: black;
   transition: all 0.5s;
 }
 
 .productListTable a:hover {
-  color: tomato;
+  color: rgb(34, 15, 159);
 }
 
 .productListTable button:hover {
-  color: rgb(236, 30, 30);
+  color: rgb(34, 15, 159);
 }
 
 .MuiDataGrid-columnHeader div {
-  color: rgb(255, 255, 255);
+  color: rgb(9, 2, 2);
+  font: 701 1.6vmax "Roboto" !important;
 }
-
 @media screen and (max-width: 600px) {
   .productListTable div {
     font: 300 4vw "Roboto";

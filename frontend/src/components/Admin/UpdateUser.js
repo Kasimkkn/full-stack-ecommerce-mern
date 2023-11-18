@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useAlert } from "react-alert";
-import { Button } from "@mui/material/Button";
+import { Button } from "@mui/material";
 import MetaData from "../../pages/layout/MetaData.js";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PersonIcon from "@mui/icons-material/Person";
@@ -14,8 +14,11 @@ import {
   clearErrors,
 } from "../../actions/userAction";
 import Loader from "../../pages/layout/Loader/Loader.js";
+import { useNavigate, useParams } from "react-router-dom";
 
-const UpdateUser = ({ history, match }) => {
+const UpdateUser = () => {
+  const history = useNavigate();
+  const match = useParams();
   const dispatch = useDispatch();
   const alert = useAlert();
 
@@ -31,7 +34,7 @@ const UpdateUser = ({ history, match }) => {
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
 
-  const userId = match.params.id;
+  const userId = match.id;
 
   useEffect(() => {
     if (user && user._id !== userId) {
@@ -53,7 +56,7 @@ const UpdateUser = ({ history, match }) => {
 
     if (isUpdated) {
       alert.success("User Updated Successfully");
-      history.push("/admin/users");
+      history("/admin/users");
       dispatch({ type: UPDATE_USER_RESET });
     }
   }, [dispatch, alert, error, history, isUpdated, updateError, user, userId]);

@@ -20,7 +20,7 @@
 }
 
 .profileContainer > div:first-child > h1 {
-  color: rgba(0, 0, 0, 0.555);
+  color: black;
   font: 500 2.2vmax "Roboto";
   transform: translateX(-10vmax) translateY(-2vmax);
 }
@@ -65,7 +65,7 @@
 }
 
 .profileContainer > div:last-child > div > p {
-  color: rgba(0, 0, 0, 0.418);
+  color: rgba(0, 0, 0, 0.9);
   font: 400 1vmax cursive;
   margin: 0.2vmax;
 }
@@ -78,7 +78,7 @@
 
 .profileContainer > div:last-child > div:last-child > a {
   border: none;
-  background-color: rgb(68, 68, 68);
+  background-color: black;
   font: 400 1vmax "Roboto";
   color: white;
   text-decoration: none;

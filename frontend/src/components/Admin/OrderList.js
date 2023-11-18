@@ -4,7 +4,7 @@ import "./productList.css";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
-import { Button } from "@mui/material/Button";
+import { Button } from "@mui/material";
 import MetaData from "../../pages/layout/MetaData";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -59,7 +59,7 @@ const OrderList = () => {
       minWidth: 150,
       flex: 0.5,
       cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Delivered"
+        return params.columns && params.columns.field === "status" && params.value === "Delivered"
           ? "greenColor"
           : "redColor";
       },
@@ -90,13 +90,13 @@ const OrderList = () => {
       renderCell: (params) => {
         return (
           <Fragment>
-            <Link to={`/admin/order/${params.getValue(params.id, "id")}`}>
+            <Link to={`/admin/order/${params.row.id}`}>
               <EditIcon />
             </Link>
 
             <Button
               onClick={() =>
-                deleteOrderHandler(params.getValue(params.id, "id"))
+                deleteOrderHandler(params.row.id)
               }
             >
               <DeleteIcon />
@@ -118,7 +118,6 @@ const OrderList = () => {
         status: item.orderStatus,
       });
     });
-
   return (
     <Fragment>
       <MetaData title={`ALL ORDERS - Admin`} />

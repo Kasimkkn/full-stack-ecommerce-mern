@@ -5,7 +5,6 @@ import MetaData from "../layout/MetaData.js";
 import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader.js";
-import Banner from "../../components/Banner/Banner";
 import { useAlert } from "react-alert";
 
 const Home = () => {
@@ -28,9 +27,6 @@ const Home = () => {
       ) : (
         <Fragment>
           <MetaData title="ECOMMERCE" />
-          
-          {/* <Banner/> */}
-
           <h2 className="homeHeading">Featured Products</h2>
           <div className="container" id="container">
             {products &&
