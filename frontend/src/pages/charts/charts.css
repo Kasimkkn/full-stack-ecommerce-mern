@@ -1,0 +1,26 @@
+.chart-container {
+    background-color: white;
+    padding: 4rem;
+    overflow-y: auto;
+}
+
+.chart-container>h1 {
+    margin: 0 0 5rem 2rem;
+}
+
+.chart-container>section {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+section>div {
+    max-width: 25rem;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: -1rem;
+}
+
+section div > h2 {
+    margin: 2rem 0;
+    text-align: center;
+}
