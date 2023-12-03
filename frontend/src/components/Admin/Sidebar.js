@@ -12,6 +12,7 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
 import RateReviewIcon from "@mui/icons-material/RateReview";
+import { FaChartBar, FaChartLine, FaChartPie } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
@@ -55,6 +56,25 @@ const Sidebar = () => {
         <p>
           <RateReviewIcon />
           Reviews
+        </p>
+      </Link>
+      <hr/>
+      <Link to="/admin/chart/bar">
+        <p >
+          <FaChartBar/>
+          BarChart
+        </p>
+      </Link>
+      <Link to="/admin/chart/pie">
+        <p >
+          <FaChartPie/>
+          PieCharts
+        </p>
+      </Link>
+      <Link to="/admin/chart/line">
+        <p >
+          <FaChartLine/>
+          LineCharts
         </p>
       </Link>
     </div>

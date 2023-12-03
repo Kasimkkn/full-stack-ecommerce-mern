@@ -1,12 +1,12 @@
 .sidebar {
-  background-color: rgb(255, 255, 255);
+  background: white;
   display: flex;
   flex-direction: column;
-  padding: 4rem 0;
+  width: 16vw;
 }
 
 .sidebar > a > img {
-  width: 50%;
+  width: 40%;
   transition: all 0.5s;
 }
 
@@ -17,7 +17,7 @@
   text-decoration: none;
   color: rgba(0, 0, 0, 0.493);
   font: 200 1rem "Roboto";
-  padding: 2rem;
+  padding: 1.6rem;
   transition: all 0.5s;
 }
 .sidebar a:hover {
@@ -29,11 +29,12 @@
   display: flex;
   align-items: center;
   color: black; 
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
 }
 .sidebar a > p > svg {
   margin-right: 0.5rem;
+  font-size: 1rem;
   
 }
 

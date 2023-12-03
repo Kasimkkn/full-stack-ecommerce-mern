@@ -1,11 +1,10 @@
 .productListContainer {
-  width: 100%;
-  box-sizing: border-box;
-  background-color: rgb(255, 255, 255);
-  border-left: 1px solid rgba(0, 0, 0, 0.158);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  background-color: white;
+    padding: 2rem;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+
 }
 
 #productListHeading {
@@ -24,8 +23,9 @@
 
 .productListTable div {
   font: 400 1.4vmax "Roboto";
-  color: black;
-  border: none !important;
+    color: black;
+    border: none !important;
+    border-collapse: collapse;
 }
 
 .productListTable a,
